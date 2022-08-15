@@ -32,3 +32,31 @@ export interface itemsApi {
     condition: string;
     shipping: fs;
   }
+
+interface author {
+  name: string,
+  lastname: string
+}
+
+interface price {
+  currency: string,
+  amount: number,
+  decimals: number
+}
+
+interface item {
+  id: string,
+  title: string,
+  price: price,
+
+}
+
+export interface itemDetail {
+  author: author,
+  item: item,
+  picture: string,
+  condition: string,
+  free_shipping: boolean,
+  sold_quantity: number,
+  description: string
+}
