@@ -34,11 +34,12 @@ export const searchItems = async (name: string) => {
         price: {
           currency: el.prices.prices[0].currency_id,
           amount: el.prices.prices[0].amount,
-          decimals: Number.parseFloat(new Intl.NumberFormat("es-AR").format(el.price)),
+          decimals: Number.parseFloat(new Intl.NumberFormat("es-AR", {style: 'decimal', minimumFractionDigits: 3}).format(el.price)),
         },
         picture: el.thumbnail,
         condition: el.condition,
         free_shipping: el.shipping.free_shipping,
+        adress: el.address.state_name
       };
     });
 

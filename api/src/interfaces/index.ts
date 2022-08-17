@@ -31,7 +31,12 @@ export interface itemsApi {
     thumbnail: string;
     condition: string;
     shipping: fs;
+    address: a;
   }
+
+interface a {
+  state_name: string
+}
 
 interface author {
   name: string,
