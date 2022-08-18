@@ -1,0 +1,64 @@
+
+.nav {
+    background-color: #FFE600;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    min-width: 1184px;
+
+    .container {
+        width: 100%;
+        margin-inline: auto;
+        max-width: 900px;
+        padding-inline: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+        flex: 1 1 0%;
+
+        .logo {
+            object-fit: contain;
+            max-width: 100%;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: row;
+            -webkit-box-align: center;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            border-radius: 4px;
+        
+            input {
+            border-radius: 4px 0 0 4px;
+            padding: 0.7rem;
+            background-color: white;
+            border: none;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            width: 100%;
+            outline: none;
+            font-size: 1rem;
+            }
+        
+            .box_lupita {
+                background-color: #EEEEEE;
+                border-radius: 0 4px 4px 0;
+                display: flex;
+        
+                img {
+                    padding: 11px;
+                }
+            }
+        }
+    }
+}
+
+::placeholder {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.24);;
+    font-weight: lighter;
+}
+

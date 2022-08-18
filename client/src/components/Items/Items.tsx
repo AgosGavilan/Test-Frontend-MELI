@@ -1,14 +1,19 @@
 import { PropsItems } from "../../types";
 import CardItems from "../CardItems/CardItems";
+import './_items.scss'
 
 function Items ({items, category}: PropsItems) {
 
+    if(items && items.length <= 0) {
+        return (<h1>cargando</h1>)
+    }
+
     return (
-        <div>
-            <div>
-            {category && category.includes("false") ? category.pop() : category && category.join(' > ')}
+        <div className="container">
+            <div className="header">
+                {category && category.includes("false") ? category.pop() : category && category.join('  >  ')}
             </div>
-            <section>
+            <section className="box">
                 {items && items.map(el => {
                     return (<CardItems
                         key={el.id}

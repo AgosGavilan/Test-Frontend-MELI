@@ -4,8 +4,9 @@ import lupita from "../../Assets/ic_Search.png"
 import { useNavigate } from "react-router-dom";
 
 import { Props } from "../../types";
+import './_navBar.scss'
 
-function NabBar ({onSearch}: Props) {
+function NabBar ({onSearch, setSearch}: Props) {
     const [items, setItems] = useState<string>("")
     const navigate = useNavigate()
 
@@ -19,14 +20,14 @@ function NabBar ({onSearch}: Props) {
         navigate(`/items?search=${items}`)
         onSearch(items);
         setItems("")
+        setSearch([])
     }
 
     return (
-        <nav>
-            <div>
-                <img src={logo} alt="logo ML" />
-            </div>
-            <form onSubmit={handleSubmit}>
+        <nav className="nav">
+            <div className="container">
+                <img src={logo} alt="logo ML" className="logo"/>
+                <form onSubmit={handleSubmit} className="form">
                     <input
                     type="text"
                     id="item"
@@ -34,11 +35,11 @@ function NabBar ({onSearch}: Props) {
                     placeholder="Nunca dejes de buscar"
                     onChange={handleChange}
                     />
-                    <button>
+                    <div className="box_lupita">
                         <img src={lupita} alt="lupa" />
-                    </button>
-            </form>
-
+                    </div>
+                </form>
+            </div>
         </nav>
     )
 }

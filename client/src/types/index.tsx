@@ -1,7 +1,8 @@
 import { itemsSearch } from "../interface"
 
 export type Props = {
-    onSearch: (name:string) => Promise<void>
+    onSearch: (name:string) => Promise<void>,
+    setSearch: (value: React.SetStateAction<itemsSearch[]>) => void
 }
 
 export type PropsItems = {
