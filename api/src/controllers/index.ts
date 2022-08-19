@@ -73,7 +73,7 @@ export const idItem = async (id: string) => {
               decimals: Number.parseFloat(new Intl.NumberFormat("es-AR").format(product.price))
             }
           },
-          picture: product.thumbnail,
+          picture: product.pictures[0].url,
           condition: product.condition,
           free_shipping: product.shipping.free_shipping,
           sold_quantity: product.sold_quantity,
