@@ -18,7 +18,7 @@ app.use(cors({
     allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept']
 }))
 
-app.use('/api', router)
+app.use('/', router)
 
 interface error {
     status: number;
