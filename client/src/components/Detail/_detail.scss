@@ -1,0 +1,110 @@
+.spiner {
+    align-self: center;
+    max-width: 900px;
+    border: 4px solid rgba(0, 0, 0, .1);
+    border-left-color: transparent;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    animation: spin 1s linear infinite
+}
+
+@keyframes spin{
+    0% {
+        transform: rotate(0deg);
+      }
+    
+      100% {
+        transform: rotate(360deg);
+      }
+}
+
+.detail-container {
+    align-self: center;
+    max-width: 900px;
+    padding-inline: 1rem;
+
+    .detail-header {
+        font-size: 14px;
+        margin-top: 16px;
+        margin-left: 5px;
+        margin-bottom: 16px;
+        min-width: 1184px;
+        color: rgba(0, 0, 0, 0.48);
+    }
+
+    .box-detail {
+        background-color: white;
+        padding: 32px;
+        border-radius: 5px;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        margin-left: 5px;
+
+        .card-detail {
+            display: flex;
+            flex-direction: row;
+
+            .left-side-detail {
+                width: 100%;
+                max-width: 636px;
+
+                .picture-detail-box {
+                    height: 680px;
+                    width: 680px;
+                
+                    .picture-detail {
+                        object-fit: contain;
+                        height: 100%;
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.description-title {
+    font-size: 28px;
+    padding-bottom: 32px;
+}
+
+.description {
+    font-size: 16px;
+    color: gray;
+}
+
+.condition-sold {
+    font-size: 14px;
+    margin-bottom: 1rem;
+    color: gray;
+}
+
+.title-detail {
+    font-size: 24px;
+    line-height: 1.03;
+    font-weight: bold;
+    color: #333333;
+}
+
+.price-detail {
+    font-size: 46px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: #333333;
+}
+
+.button-detail {
+    background-color: #3483FA;
+    border: none;
+    color: #EEEEEE;
+    border-radius: 4px;
+    height: 2rem;
+    padding-right: 4.5rem;
+    padding-left: 4.5rem;
+    font-size: 14px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #2b6cb0;
+    }
+}

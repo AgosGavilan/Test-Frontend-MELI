@@ -5,7 +5,10 @@ import './_items.scss'
 function Items ({items, category}: PropsItems) {
 
     if(items && items.length <= 0) {
-        return (<h1>cargando</h1>)
+        return (
+            <div className="spiner">
+            </div>
+        )
     }
 
     return (

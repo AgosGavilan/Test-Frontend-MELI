@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from "../../Assets/Logo_ML.png"
 import lupita from "../../Assets/ic_Search.png"
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { Props } from "../../types";
 import './_navBar.scss'
@@ -26,7 +26,9 @@ function NabBar ({onSearch, setSearch}: Props) {
     return (
         <nav className="nav">
             <div className="container">
-                <img src={logo} alt="logo ML" className="logo"/>
+                <Link to={"/"}>
+                    <img src={logo} alt="logo ML" className="logo"/>
+                </Link>
                 <form onSubmit={handleSubmit} className="form">
                     <input
                     type="text"
@@ -35,9 +37,9 @@ function NabBar ({onSearch, setSearch}: Props) {
                     placeholder="Nunca dejes de buscar"
                     onChange={handleChange}
                     />
-                    <div className="box_lupita">
+                    <button className="box_lupita">
                         <img src={lupita} alt="lupa" />
-                    </div>
+                    </button>
                 </form>
             </div>
         </nav>

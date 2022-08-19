@@ -14,7 +14,11 @@ export default function CardItems({key, id, title, price, condition, picture, fr
                     </div>
                     <div className='left_side_rigth'>
                         <div className='price-and-fs'>
-                            <p className='price'>$ {price}</p>
+                            <p className='price'>
+                                $ {price.toString().includes(".")
+                                    ? price.toFixed(3)
+                                    : price}
+                            </p>
                             {free_shipping && 
                             <img src={delivery} alt="shipping" className='img-shipping'/>}
                         </div>
@@ -25,6 +29,7 @@ export default function CardItems({key, id, title, price, condition, picture, fr
                     {adress}
                 </div>
         </div>
+        <div className='line'></div>
     </NavLink>
   )
 }
