@@ -15,7 +15,7 @@ function App() {
   const [category, setCategory] = useState<string[]>()
 
   async function onSearch (name:string) {
-    const { data } = await axios.get(`http://localhost:3001/api/items?q=${name}`)
+    const { data } = await axios.get(`/api/items?q=${name}`)
     let response = await data //response es ahora un array de objetos
     setSearch(response.items)
     setCategory(response.category)

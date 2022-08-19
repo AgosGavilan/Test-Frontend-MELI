@@ -11,7 +11,7 @@ export default function Detail({category}: PropsItems) {
   const {id} = useParams()
 
   async function getDetail (id: string) {
-    const { data } = await axios.get(`http://localhost:3001/api/items/${id}`)
+    const { data } = await axios.get(`/api/items/${id}`)
     const rta = await data
     setProduct(rta)
   }
